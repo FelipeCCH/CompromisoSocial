@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CompromisoSocial.View;
 
 namespace CompromisoSocial
 {
@@ -16,7 +17,7 @@ namespace CompromisoSocial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FRM_PanelAdmin());
         }
     }
 }
