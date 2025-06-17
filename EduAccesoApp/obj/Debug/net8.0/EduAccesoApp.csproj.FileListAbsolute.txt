@@ -1,0 +1,2 @@
+D:\Proyecto-Compromiso\EduAccesoApp\obj\Debug\net8.0\EduAccesoApp.csproj.AssemblyReference.cache
+D:\Proyecto-Compromiso\EduAccesoApp\obj\Debug\net8.0\Avalonia\Resources.Inputs.cache

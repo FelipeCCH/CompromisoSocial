@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="EduAccesoApp.View.MainWindow"
+        Width="400" Height="550"
+        Background="#012E40"
+        Title="EduAcceso - Iniciar sesión">
+
+    <Border Padding="30" Background="#024959" CornerRadius="16" Margin="25">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="25">
+
+            <TextBlock Text="EDUACCESO"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="#FFC100"
+                       HorizontalAlignment="Center"/>
+
+            <TextBox x:Name="txtCorreo"
+                     Watermark="Correo"
+                     Width="250"
+                     Height="35"
+                     Background="#FFFFFF"
+                     Foreground="#1E1E1E"
+                     CornerRadius="6" />
+
+            <TextBox x:Name="txtClave"
+                     Watermark="Contraseña"
+                     PasswordChar="*"
+                     Width="250"
+                     Height="35"
+                     Background="#FFFFFF"
+                     Foreground="#1E1E1E"
+                     CornerRadius="6" />
+
+            <Button x:Name="btnLogin"
+                    Content="INICIAR SESIÓN"
+                    Width="250"
+                    Height="40"
+                    Background="#B42B2B"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    CornerRadius="6"
+                    Click="btnLogin_Click"/>
+
+        </StackPanel>
+    </Border>
+</Window>

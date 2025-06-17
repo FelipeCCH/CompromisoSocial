@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="EduAccesoApp.View.PanelAdministrador"
+        Width="600" Height="400"
+        Title="Panel Principal"
+        Background="#012E40">
+
+    <StackPanel Margin="20" Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <TextBlock Text="Bienvenido al sistema" FontSize="24" FontWeight="Bold" Foreground="#FFC100" HorizontalAlignment="Center"/>
+
+        <Button Content="Gestionar Usuarios"
+                Width="250"
+                Height="40"
+                Background="#024959"
+                Foreground="White"
+                Click="AbrirUsuarios_Click" />
+
+        <Button Content="Gestionar Visitantes"
+                Width="250"
+                Height="40"
+                Background="#024959"
+                Foreground="White"
+                Click="AbrirVisitantes_Click" />
+
+        <Button Content="Registrar Visitas"
+                Width="250"
+                Height="40"
+                Background="#024959"
+                Foreground="White"
+                Click="AbrirVisitas_Click" />
+
+        <Button Content="Cerrar sesión"
+                Width="250"
+                Height="40"
+                Background="#B42B2B"
+                Foreground="White"
+                Click="CerrarSesion_Click" />
+
+    </StackPanel>
+</Window>
