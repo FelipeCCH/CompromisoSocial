@@ -104,5 +104,13 @@ namespace CompromisoSocial.View
 
 
         }
+
+        private void Administrador_Click(object sender, EventArgs e)
+        {
+
+            FRM_RegistroUsuario registroUsuario = new FRM_RegistroUsuario();
+            registroUsuario.ShowDialog(); // Muestra el formulario de registro de usuario
+
+        }
     }
 }

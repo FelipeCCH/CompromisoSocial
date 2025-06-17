@@ -57,7 +57,7 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(223, 450);
+            this.sidebar.Size = new System.Drawing.Size(179, 450);
             this.sidebar.TabIndex = 0;
             this.sidebar.Visible = false;
             this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
@@ -68,7 +68,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(223, 73);
+            this.panel2.Size = new System.Drawing.Size(179, 73);
             this.panel2.TabIndex = 1;
             // 
             // home
@@ -82,7 +82,7 @@
             this.home.Location = new System.Drawing.Point(0, 0);
             this.home.Name = "home";
             this.home.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.home.Size = new System.Drawing.Size(223, 23);
+            this.home.Size = new System.Drawing.Size(179, 23);
             this.home.TabIndex = 2;
             this.home.Text = "Home";
             this.home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,7 +100,7 @@
             this.Usurios.Location = new System.Drawing.Point(0, 23);
             this.Usurios.Name = "Usurios";
             this.Usurios.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.Usurios.Size = new System.Drawing.Size(223, 23);
+            this.Usurios.Size = new System.Drawing.Size(179, 23);
             this.Usurios.TabIndex = 3;
             this.Usurios.Text = "Usuarios";
             this.Usurios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,7 +116,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 117);
+            this.panel1.Size = new System.Drawing.Size(179, 117);
             this.panel1.TabIndex = 4;
             // 
             // Administrador
@@ -130,11 +130,12 @@
             this.Administrador.Location = new System.Drawing.Point(0, 46);
             this.Administrador.Name = "Administrador";
             this.Administrador.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.Administrador.Size = new System.Drawing.Size(223, 23);
+            this.Administrador.Size = new System.Drawing.Size(179, 23);
             this.Administrador.TabIndex = 4;
             this.Administrador.Text = "Administrador";
             this.Administrador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Administrador.UseVisualStyleBackColor = true;
+            this.Administrador.Click += new System.EventHandler(this.Administrador_Click);
             // 
             // visitante
             // 
@@ -147,7 +148,7 @@
             this.visitante.Location = new System.Drawing.Point(0, 69);
             this.visitante.Name = "visitante";
             this.visitante.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.visitante.Size = new System.Drawing.Size(223, 23);
+            this.visitante.Size = new System.Drawing.Size(179, 23);
             this.visitante.TabIndex = 5;
             this.visitante.Text = "Visitantes";
             this.visitante.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,8 +193,8 @@
             this.Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Salir.Location = new System.Drawing.Point(0, 390);
             this.Salir.Name = "Salir";
-            this.Salir.Padding = new System.Windows.Forms.Padding(15, 0, 35, 0);
-            this.Salir.Size = new System.Drawing.Size(223, 60);
+            this.Salir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Salir.Size = new System.Drawing.Size(179, 60);
             this.Salir.TabIndex = 7;
             this.Salir.Text = "Salir";
             this.Salir.UseVisualStyleBackColor = true;
