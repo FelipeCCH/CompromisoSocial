@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EduAcceso.Controlador;
+using EduAcceso.Modelo;
 
 namespace CompromisoSocial.View
 {
@@ -24,6 +26,98 @@ namespace CompromisoSocial.View
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //ListaUsuario listaUsuario = new ListaUsuario();
+            //listaUsuario.Show();
+
+
+            ListaUsuario listaUsuario = new ListaUsuario();
+            listaUsuario.ShowDialog(); // ✅ Esto sí fuerza que cargue correctamente
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FRM_RegistroUsuario_Load(object sender, EventArgs e)
+        {
+
+
+            cboRol.Items.Add("Administrador");
+            cboRol.Items.Add("Supervisor");
+            cboRol.Items.Add("Visitante");
+            cboRol.SelectedIndex = 0; // Por defecto
+
+
+
+        }
+
+        private void Nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Usuario nuevoUsuario = new Usuario
+            {
+                nombre = Nombre.Text.Trim(),
+                correo = txtCorreo.Text.Trim(),
+                telefono = int.Parse(txtTelefono.Text.Trim()),
+                clave = txtClave.Text.Trim(),
+                rol = cboRol.SelectedItem.ToString()
+            };
+
+            UsuarioController controller = new UsuarioController();
+            bool guardado = controller.InsertarUsuario(nuevoUsuario);
+
+            if (guardado)
+            {
+                MessageBox.Show("Usuario guardado exitosamente.");
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo guardar el usuario.");
+            }
+
+
+        }
+
+        private void LimpiarCampos()
+        {
+            Nombre.Clear();
+            txtCorreo.Clear();
+            txtTelefono.Clear();
+            txtClave.Clear();
+            cboRol.SelectedIndex = 0;
+
+
+
+
 
         }
     }
