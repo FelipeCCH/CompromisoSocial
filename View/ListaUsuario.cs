@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using EduAcceso.Controlador;
 
@@ -16,74 +10,61 @@ namespace CompromisoSocial.View
         public ListaUsuario()
         {
             InitializeComponent();
-
-            this.Shown += ListaUsuario_Shown;
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            this.Load += ListaUsuario_Load;
         }
 
         private void ListaUsuario_Load(object sender, EventArgs e)
         {
-
-
-
             CargarUsuarios();
-
-        }
-
-        private void ListaUsuario_Shown(object sender, EventArgs e)
-        {
-            CargarUsuarios();
-        }
-
-
-
-
-        private void datagridListaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+            EstilizarDataGridView();
         }
 
         private void CargarUsuarios()
         {
-            UsuarioController controller = new UsuarioController();
+            var controller = new UsuarioController();
             var lista = controller.ObtenerUsuarios();
 
-            datagridListaUsuario.AutoGenerateColumns = true;
             datagridListaUsuario.DataSource = null;
+            datagridListaUsuario.AutoGenerateColumns = true;
             datagridListaUsuario.DataSource = lista;
+        }
 
-            // Forzar refresco visual del DGV
-            datagridListaUsuario.Invalidate();
-            datagridListaUsuario.Update();
-            datagridListaUsuario.Refresh();
-
-            // Forzar refresco del formulario completo
-            this.Invalidate();
-            this.Update();
-            this.Refresh();
-
-            // Estilo mínimo forzado
-            datagridListaUsuario.DefaultCellStyle.ForeColor = Color.Black;
-            datagridListaUsuario.DefaultCellStyle.BackColor = Color.White;
-            datagridListaUsuario.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-            datagridListaUsuario.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+        private void EstilizarDataGridView()
+        {
             datagridListaUsuario.EnableHeadersVisualStyles = false;
+
+            // Encabezados
+            datagridListaUsuario.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
+            datagridListaUsuario.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            datagridListaUsuario.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Filas
+            datagridListaUsuario.DefaultCellStyle.BackColor = Color.White;
+            datagridListaUsuario.DefaultCellStyle.ForeColor = Color.Black;
+            datagridListaUsuario.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+            datagridListaUsuario.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            datagridListaUsuario.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            datagridListaUsuario.GridColor = Color.LightGray;
+            datagridListaUsuario.RowHeadersVisible = false;
+            datagridListaUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void buttonCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Acción del botón cerrar (btnCerrar)
+            this.Close();
         }
 
         private void datagridListaUsuario_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Acción si se hace clic en una celda (puedes dejarlo vacío por ahora)
         }
+
     }
 }

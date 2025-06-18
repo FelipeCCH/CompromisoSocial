@@ -1,115 +1,105 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CompromisoSocial.View
 {
-
     public partial class FRM_PanelAdmin : Form
-    { 
-        
-        // Variables para controlar animación
-    private bool expandiendo = false;
-    private int sidebarWidth; // Valor original del ancho
-    private int sidebarTarget; // Valor final al expandir o colapsar
-    private int sidebarStep = 20; // Velocidad del cambio de ancho
-
+    {
+        private bool expandiendo = false;
+        private int sidebarTarget = 200;
 
         public FRM_PanelAdmin()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_Click(object sender, EventArgs e)
-        {
-            sidebar.Visible = true; // Asegúrate de que el sidebar esté visible antes de animar
-            expandiendo = true;
-            sidebarTarget = 200; // Cambia este valor según el ancho expandido deseado
-            timer1.Start();
-
-
-
-        }
-
-        private void close_Click(object sender, EventArgs e)
-        {
-
-            expandiendo = false;
-            sidebarTarget = 0; // Cerrar completamente
-            timer1.Start();
-
-        }
-
-        private void sidebar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-            if (expandiendo)
-            {
-                if (sidebar.Width < sidebarTarget)
-                {
-                    sidebar.Width += sidebarStep;
-                }
-                else
-                {
-                    timer1.Stop();
-                }
-            }
-            else
-            {
-                if (sidebar.Width > sidebarTarget)
-                {
-                    sidebar.Width -= sidebarStep;
-                }
-                else
-                {
-                    timer1.Stop();
-                }
-            }
-
-
+            EstilizarSubmenus();
         }
 
         private void FRM_PanelAdmin_Load(object sender, EventArgs e)
         {
+            sidebar.Width = 200;
+            sidebar.Visible = false;
+        }
 
-            sidebarWidth = sidebar.Width; // Ancho actual (visible)
-            sidebarTarget = sidebarWidth;
+        private void menu_Click(object sender, EventArgs e)
+        {
+            if (sidebar.Width == 0)
+            {
+                sidebar.Visible = true;
+                expandiendo = true;
+                sidebarTarget = 200;
+            }
+            else
+            {
+                expandiendo = false;
+                sidebarTarget = 0;
+            }
+
+            timer1.Start();
+        }
+
+        private void ToggleSubMenu(Panel submenu)
+        {
+            // Cierra todos
+            panelRegistroSubmenu.Visible = false;
+            panelListasSubmenu.Visible = false;
+
+            // Abre el que se seleccionó
+            submenu.Visible = true;
+        }
 
 
+        private void close_Click(object sender, EventArgs e)
+        {
+            expandiendo = false;
+            timer1.Start();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int step = 50;
+
+            if (expandiendo)
+            {
+                if (sidebar.Width < sidebarTarget)
+                    sidebar.Width += step;
+                else
+                    timer1.Stop();
+            }
+            else
+            {
+                if (sidebar.Width > 0)
+                    sidebar.Width -= step;
+                else
+                {
+                    timer1.Stop();
+                    sidebar.Visible = false;
+                }
+            }
         }
 
         private void Administrador_Click(object sender, EventArgs e)
         {
+            var form = new FRM_RegistroUsuario();
+            form.ShowDialog();
+        }
 
-            FRM_RegistroUsuario registroUsuario = new FRM_RegistroUsuario();
-            registroUsuario.ShowDialog(); // Muestra el formulario de registro de usuario
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ir al dashboard principal");
+        }
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            ToggleSubMenu(panelRegistroSubmenu);
+        }
+
+        private void btnListas_Click(object sender, EventArgs e)
+        {
+            ToggleSubMenu(panelListasSubmenu);
+        }
+
+        private void btnVisitas_Click(object sender, EventArgs e)
+        {
 
         }
     }

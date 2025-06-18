@@ -135,6 +135,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FRM_PanelAdmin.es-CR.resx">
+      <DependentUpon>FRM_PanelAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FRM_PanelAdmin.resx">
       <DependentUpon>FRM_PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>

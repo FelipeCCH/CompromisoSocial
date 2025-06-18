@@ -31,8 +31,6 @@ namespace CompromisoSocial.View
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //ListaUsuario listaUsuario = new ListaUsuario();
-            //listaUsuario.Show();
 
 
             ListaUsuario listaUsuario = new ListaUsuario();
@@ -49,20 +47,13 @@ namespace CompromisoSocial.View
         private void FRM_RegistroUsuario_Load(object sender, EventArgs e)
         {
 
-
-            cboRol.Items.Add("Administrador");
-            cboRol.Items.Add("Supervisor");
-            cboRol.Items.Add("Visitante");
-            cboRol.SelectedIndex = 0; // Por defecto
-
-
-
         }
 
         private void Nombre_TextChanged(object sender, EventArgs e)
         {
 
         }
+
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
@@ -118,6 +109,21 @@ namespace CompromisoSocial.View
 
 
 
+
+        }
+
+        private void lbRol_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolver(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptar(object sender, EventArgs e)
+        {
 
         }
     }
