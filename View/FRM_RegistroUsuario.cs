@@ -126,5 +126,10 @@ namespace CompromisoSocial.View
         {
 
         }
+
+        private void lbTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

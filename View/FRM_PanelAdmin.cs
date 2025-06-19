@@ -12,7 +12,7 @@ namespace CompromisoSocial.View
         public FRM_PanelAdmin()
         {
             InitializeComponent();
-            EstilizarSubmenus();
+            //EstilizarSubmenus();
         }
 
         private void FRM_PanelAdmin_Load(object sender, EventArgs e)
@@ -41,8 +41,8 @@ namespace CompromisoSocial.View
         private void ToggleSubMenu(Panel submenu)
         {
             // Cierra todos
-            panelRegistroSubmenu.Visible = false;
-            panelListasSubmenu.Visible = false;
+            //panelRegistroSubmenu.Visible = false;
+            //panelListasSubmenu.Visible = false;
 
             // Abre el que se seleccionó
             submenu.Visible = true;
@@ -90,12 +90,12 @@ namespace CompromisoSocial.View
         }
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            ToggleSubMenu(panelRegistroSubmenu);
+            //ToggleSubMenu(panelRegistroSubmenu);
         }
 
         private void btnListas_Click(object sender, EventArgs e)
         {
-            ToggleSubMenu(panelListasSubmenu);
+            //ToggleSubMenu(panelListasSubmenu);
         }
 
         private void btnVisitas_Click(object sender, EventArgs e)

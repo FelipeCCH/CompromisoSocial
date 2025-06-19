@@ -125,7 +125,7 @@ namespace CompromisoSocial.View
             // FRM_PanelAdmin
             // 
             resources.ApplyResources(this, "$this");
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.menu);
             this.Controls.Add(this.sidebar);
             this.MaximizeBox = false;
