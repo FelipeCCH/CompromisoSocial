@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EduAcceso.Modelo
+namespace CompromisoSocial.Modelo
 {
     public class Visita
     {

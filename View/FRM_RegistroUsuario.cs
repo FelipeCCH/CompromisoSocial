@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EduAcceso.Controlador;
-using EduAcceso.Modelo;
+using CompromisoSocial.Controlador;
+using CompromisoSocial.Modelo;
 
 namespace CompromisoSocial.View
 {
@@ -17,6 +17,7 @@ namespace CompromisoSocial.View
         public FRM_RegistroUsuario()
         {
             InitializeComponent();
+            cboRol.SelectedIndex = 0;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -37,11 +38,6 @@ namespace CompromisoSocial.View
             listaUsuario.ShowDialog(); // ✅ Esto sí fuerza que cargue correctamente
 
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void FRM_RegistroUsuario_Load(object sender, EventArgs e)
@@ -65,14 +61,18 @@ namespace CompromisoSocial.View
 
         }
 
-        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
+        private void LimpiarCampos()
         {
-
+            Nombre.Clear();
+            txtCorreo.Clear();
+            txtTelefono.Clear();
+            txtClave.Clear();
+            cboRol.SelectedIndex = 0;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
+        private void btnAceptar(object sender, EventArgs e)
+        {
             Usuario nuevoUsuario = new Usuario
             {
                 nombre = Nombre.Text.Trim(),
@@ -94,42 +94,16 @@ namespace CompromisoSocial.View
             {
                 MessageBox.Show("No se pudo guardar el usuario.");
             }
-
-
-        }
-
-        private void LimpiarCampos()
-        {
-            Nombre.Clear();
-            txtCorreo.Clear();
-            txtTelefono.Clear();
-            txtClave.Clear();
-            cboRol.SelectedIndex = 0;
-
-
-
-
-
-        }
-
-        private void lbRol_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVolver(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAceptar(object sender, EventArgs e)
-        {
-
         }
 
         private void lbTitulo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVolverRUsuario_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

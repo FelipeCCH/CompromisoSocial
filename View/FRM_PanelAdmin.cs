@@ -20,6 +20,24 @@ namespace CompromisoSocial.View
             sidebar.Width = 200;
             sidebar.Visible = false;
         }
+        private void OcultarSubMenus()
+        {
+            pnlRegistroSubmenu.Visible = false;
+            pnlListasSubmenu.Visible = false;
+        }
+
+        private void MostrarSubMenu(Panel subMenu)
+        {
+            if (!subMenu.Visible)
+            {
+                OcultarSubMenus();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
 
         private void menu_Click(object sender, EventArgs e)
         {
@@ -80,27 +98,34 @@ namespace CompromisoSocial.View
 
         private void Administrador_Click(object sender, EventArgs e)
         {
-            var form = new FRM_RegistroUsuario();
-            form.ShowDialog();
+            MostrarSubMenu(pnlRegistroSubmenu);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ir al dashboard principal");
-        }
-        private void btnRegistro_Click(object sender, EventArgs e)
-        {
-            //ToggleSubMenu(panelRegistroSubmenu);
-        }
-
-        private void btnListas_Click(object sender, EventArgs e)
-        {
-            //ToggleSubMenu(panelListasSubmenu);
+            //MessageBox.Show("Ir al dashboard principal");
         }
 
         private void btnVisitas_Click(object sender, EventArgs e)
         {
+            MostrarSubMenu(pnlListasSubmenu);
+        }
 
+        private void btnRegistroUsuarios_Click(object sender, EventArgs e)
+        {
+            var form = new FRM_RegistroUsuario();
+            form.ShowDialog();
+        }
+
+        private void btnListaUsuarios_Click(object sender, EventArgs e)
+        {
+            var form = new ListaUsuario();
+            form.ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

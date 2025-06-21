@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using EduAcceso.Controlador;
+using CompromisoSocial.Controlador;
 
 namespace CompromisoSocial.View
 {
