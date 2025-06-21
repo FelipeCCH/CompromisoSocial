@@ -26,7 +26,7 @@
             this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCerrar.BackColor = System.Drawing.Color.CadetBlue;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Location = new System.Drawing.Point(620, 370);
             this.btnCerrar.Name = "btnCerrar";
