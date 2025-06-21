@@ -61,9 +61,17 @@ namespace CompromisoSocial.View
             this.Close();
         }
 
-        private void datagridListaUsuario_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+
+        private void datagridListaUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Acción si se hace clic en una celda (puedes dejarlo vacío por ahora)
+            if (e.RowIndex >= 0) // Asegurarse de que no se hizo clic en el encabezado de la columna
+            {
+                DataGridViewRow row = datagridListaUsuario.SelectedRows[0];
+                // Aquí puedes acceder a los datos de la fila seleccionada
+                string valorColumna1 = row.Cells["nombre"].Value.ToString();
+                // ...
+                MessageBox.Show(valorColumna1);
+            }
         }
 
     }

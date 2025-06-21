@@ -52,14 +52,14 @@
             // 
             this.datagridListaUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.datagridListaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridListaUsuario.Enabled = false;
             this.datagridListaUsuario.EnableHeadersVisualStyles = false;
             this.datagridListaUsuario.Location = new System.Drawing.Point(60, 80);
             this.datagridListaUsuario.Name = "datagridListaUsuario";
             this.datagridListaUsuario.RowHeadersWidth = 51;
+            this.datagridListaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridListaUsuario.Size = new System.Drawing.Size(680, 260);
             this.datagridListaUsuario.TabIndex = 4;
-            this.datagridListaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellContentClick_1);
+            this.datagridListaUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellClick);
             // 
             // ListaUsuario
             // 
