@@ -52,6 +52,8 @@
             // 
             this.datagridListaUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.datagridListaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridListaUsuario.Enabled = false;
+            this.datagridListaUsuario.EnableHeadersVisualStyles = false;
             this.datagridListaUsuario.Location = new System.Drawing.Point(60, 80);
             this.datagridListaUsuario.Name = "datagridListaUsuario";
             this.datagridListaUsuario.RowHeadersWidth = 51;

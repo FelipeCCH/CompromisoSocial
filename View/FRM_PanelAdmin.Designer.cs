@@ -22,28 +22,28 @@ namespace CompromisoSocial.View
             this.sidebar = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnVisitas = new System.Windows.Forms.Button();
-            this.btnRegistro = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.PictureBox();
-            this.menu = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlRegistroSubmenu = new System.Windows.Forms.Panel();
-            this.btnRegistroUsuarios = new System.Windows.Forms.Button();
-            this.btnRegistroVisitante = new System.Windows.Forms.Button();
-            this.btnRegistroVisita = new System.Windows.Forms.Button();
             this.pnlListasSubmenu = new System.Windows.Forms.Panel();
             this.btnListaVisitas = new System.Windows.Forms.Button();
             this.btnListaVisitantes = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
+            this.btnVisitas = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlRegistroSubmenu = new System.Windows.Forms.Panel();
+            this.btnRegistroVisita = new System.Windows.Forms.Button();
+            this.btnRegistroVisitante = new System.Windows.Forms.Button();
+            this.btnRegistroUsuarios = new System.Windows.Forms.Button();
+            this.btnRegistro = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.menu = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
-            this.pnlRegistroSubmenu.SuspendLayout();
             this.pnlListasSubmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlRegistroSubmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -75,39 +75,6 @@ namespace CompromisoSocial.View
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnVisitas
-            // 
-            resources.ApplyResources(this.btnVisitas, "btnVisitas");
-            this.btnVisitas.FlatAppearance.BorderSize = 0;
-            this.btnVisitas.ForeColor = System.Drawing.Color.White;
-            this.btnVisitas.Name = "btnVisitas";
-            this.btnVisitas.UseVisualStyleBackColor = true;
-            this.btnVisitas.Click += new System.EventHandler(this.btnVisitas_Click);
-            // 
-            // btnRegistro
-            // 
-            resources.ApplyResources(this.btnRegistro, "btnRegistro");
-            this.btnRegistro.FlatAppearance.BorderSize = 0;
-            this.btnRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.UseVisualStyleBackColor = true;
-            this.btnRegistro.Click += new System.EventHandler(this.Administrador_Click);
-            // 
-            // btnHome
-            // 
-            resources.ApplyResources(this.btnHome, "btnHome");
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Name = "btnHome";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // close
             // 
             this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
@@ -115,48 +82,6 @@ namespace CompromisoSocial.View
             this.close.Name = "close";
             this.close.TabStop = false;
             this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.DarkGoldenrod;
-            resources.ApplyResources(this.menu, "menu");
-            this.menu.Name = "menu";
-            this.menu.TabStop = false;
-            this.menu.Click += new System.EventHandler(this.menu_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pnlRegistroSubmenu
-            // 
-            this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroVisita);
-            this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroVisitante);
-            this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroUsuarios);
-            resources.ApplyResources(this.pnlRegistroSubmenu, "pnlRegistroSubmenu");
-            this.pnlRegistroSubmenu.Name = "pnlRegistroSubmenu";
-            // 
-            // btnRegistroUsuarios
-            // 
-            resources.ApplyResources(this.btnRegistroUsuarios, "btnRegistroUsuarios");
-            this.btnRegistroUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnRegistroUsuarios.Name = "btnRegistroUsuarios";
-            this.btnRegistroUsuarios.UseVisualStyleBackColor = true;
-            this.btnRegistroUsuarios.Click += new System.EventHandler(this.btnRegistroUsuarios_Click);
-            // 
-            // btnRegistroVisitante
-            // 
-            resources.ApplyResources(this.btnRegistroVisitante, "btnRegistroVisitante");
-            this.btnRegistroVisitante.ForeColor = System.Drawing.Color.White;
-            this.btnRegistroVisitante.Name = "btnRegistroVisitante";
-            this.btnRegistroVisitante.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistroVisita
-            // 
-            resources.ApplyResources(this.btnRegistroVisita, "btnRegistroVisita");
-            this.btnRegistroVisita.ForeColor = System.Drawing.Color.White;
-            this.btnRegistroVisita.Name = "btnRegistroVisita";
-            this.btnRegistroVisita.UseVisualStyleBackColor = true;
             // 
             // pnlListasSubmenu
             // 
@@ -188,6 +113,81 @@ namespace CompromisoSocial.View
             this.btnListaUsuarios.UseVisualStyleBackColor = true;
             this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
             // 
+            // btnVisitas
+            // 
+            resources.ApplyResources(this.btnVisitas, "btnVisitas");
+            this.btnVisitas.FlatAppearance.BorderSize = 0;
+            this.btnVisitas.ForeColor = System.Drawing.Color.White;
+            this.btnVisitas.Name = "btnVisitas";
+            this.btnVisitas.UseVisualStyleBackColor = true;
+            this.btnVisitas.Click += new System.EventHandler(this.btnVisitas_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pnlRegistroSubmenu
+            // 
+            this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroVisita);
+            this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroVisitante);
+            this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroUsuarios);
+            resources.ApplyResources(this.pnlRegistroSubmenu, "pnlRegistroSubmenu");
+            this.pnlRegistroSubmenu.Name = "pnlRegistroSubmenu";
+            // 
+            // btnRegistroVisita
+            // 
+            resources.ApplyResources(this.btnRegistroVisita, "btnRegistroVisita");
+            this.btnRegistroVisita.ForeColor = System.Drawing.Color.White;
+            this.btnRegistroVisita.Name = "btnRegistroVisita";
+            this.btnRegistroVisita.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistroVisitante
+            // 
+            resources.ApplyResources(this.btnRegistroVisitante, "btnRegistroVisitante");
+            this.btnRegistroVisitante.ForeColor = System.Drawing.Color.White;
+            this.btnRegistroVisitante.Name = "btnRegistroVisitante";
+            this.btnRegistroVisitante.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistroUsuarios
+            // 
+            resources.ApplyResources(this.btnRegistroUsuarios, "btnRegistroUsuarios");
+            this.btnRegistroUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnRegistroUsuarios.Name = "btnRegistroUsuarios";
+            this.btnRegistroUsuarios.UseVisualStyleBackColor = true;
+            this.btnRegistroUsuarios.Click += new System.EventHandler(this.btnRegistroUsuarios_Click);
+            // 
+            // btnRegistro
+            // 
+            resources.ApplyResources(this.btnRegistro, "btnRegistro");
+            this.btnRegistro.FlatAppearance.BorderSize = 0;
+            this.btnRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.Administrador_Click);
+            // 
+            // btnHome
+            // 
+            resources.ApplyResources(this.btnHome, "btnHome");
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Name = "btnHome";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.DarkGoldenrod;
+            resources.ApplyResources(this.menu, "menu");
+            this.menu.Name = "menu";
+            this.menu.TabStop = false;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FRM_PanelAdmin
             // 
             this.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -199,11 +199,11 @@ namespace CompromisoSocial.View
             this.Load += new System.EventHandler(this.FRM_PanelAdmin_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
-            this.pnlRegistroSubmenu.ResumeLayout(false);
             this.pnlListasSubmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlRegistroSubmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.ResumeLayout(false);
 
         }
