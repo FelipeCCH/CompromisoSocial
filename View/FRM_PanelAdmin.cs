@@ -13,6 +13,10 @@ namespace CompromisoSocial.View
         {
             InitializeComponent();
             //EstilizarSubmenus();
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+
         }
 
         private void FRM_PanelAdmin_Load(object sender, EventArgs e)

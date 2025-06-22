@@ -18,6 +18,10 @@ namespace CompromisoSocial.View
         {
             InitializeComponent();
             cboRol.SelectedIndex = 0;
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -33,6 +37,17 @@ namespace CompromisoSocial.View
         private void button3_Click(object sender, EventArgs e)
         {
 
+            UsuarioController controller = new UsuarioController();
+            var usuarios = controller.ObtenerUsuarios();
+
+            if (usuarios == null || usuarios.Count == 0)
+            {
+                MessageBox.Show("⚠️ No existen registros de usuarios. Por favor agrega uno.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+           
+
 
             ListaUsuario listaUsuario = new ListaUsuario();
             listaUsuario.ShowDialog(); // ✅ Esto sí fuerza que cargue correctamente
@@ -42,6 +57,7 @@ namespace CompromisoSocial.View
 
         private void FRM_RegistroUsuario_Load(object sender, EventArgs e)
         {
+
 
         }
 
@@ -73,6 +89,34 @@ namespace CompromisoSocial.View
 
         private void btnAceptar(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(Nombre.Text) ||
+            string.IsNullOrWhiteSpace(txtCorreo.Text) ||
+            string.IsNullOrWhiteSpace(txtTelefono.Text) ||
+            string.IsNullOrWhiteSpace(txtClave.Text))
+            {
+                MessageBox.Show("⚠️ Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtCorreo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("⚠️ El formato del correo es inválido.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(txtTelefono.Text, out _))
+            {
+                MessageBox.Show("⚠️ El teléfono debe ser numérico.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
+
+
+
+
             Usuario nuevoUsuario = new Usuario
             {
                 nombre = Nombre.Text.Trim(),
@@ -105,5 +149,29 @@ namespace CompromisoSocial.View
         {
             this.Close();
         }
+
+        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //private string hashclave(string clave)
+        //{
+        //    using (var sha = system.security.cryptography.sha256.create())
+        //    {
+        //        var bytes = encoding.utf8.getbytes(clave);
+        //        var hash = sha.computehash(bytes);
+        //        return convert.tobase64string(hash);
+        //    }
+        //}
+
+        private void chkMostrarClave_CheckedChanged(object sender, EventArgs e)
+        {
+           // txtClave.UseSystemPasswordChar = !chkMostrarClave.Checked;
+        }
+
+
+
+
     }
 }

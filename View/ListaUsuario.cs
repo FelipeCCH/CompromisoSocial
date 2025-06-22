@@ -74,5 +74,9 @@ namespace CompromisoSocial.View
             }
         }
 
+        private void datagridListaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

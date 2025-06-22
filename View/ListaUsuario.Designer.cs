@@ -60,6 +60,7 @@
             this.datagridListaUsuario.Size = new System.Drawing.Size(680, 260);
             this.datagridListaUsuario.TabIndex = 4;
             this.datagridListaUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellClick);
+            this.datagridListaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellContentClick);
             // 
             // ListaUsuario
             // 
