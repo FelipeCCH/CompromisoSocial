@@ -76,7 +76,7 @@
             // hashicon
             // 
             this.hashicon.Image = ((System.Drawing.Image)(resources.GetObject("hashicon.Image")));
-            this.hashicon.Location = new System.Drawing.Point(223, 214);
+            this.hashicon.Location = new System.Drawing.Point(232, 222);
             this.hashicon.Name = "hashicon";
             this.hashicon.Size = new System.Drawing.Size(32, 30);
             this.hashicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,17 +114,18 @@
             // 
             this.txtContrasena.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(40, 222);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(187, 22);
+            this.txtContrasena.Size = new System.Drawing.Size(187, 29);
             this.txtContrasena.TabIndex = 3;
             this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(40, 139);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Multiline = true;

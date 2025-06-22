@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite; // ✅ Usa esta librería correctamente
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -10,7 +11,8 @@ namespace CompromisoSocial.Controlador
 {
     public class UsuarioController
     {
-        private string connectionString = "Data Source=educaAccesobd.db;Version=3;";
+        //private string connectionString = "Data Source=educaAccesobd.db;Version=3;";
+        private string connectionString = $"Data Source={Path.Combine(Application.StartupPath, "educaAccesobd.db")};Version=3;";
 
         // Login
         public Usuario VerificarLogin(string correo, string clave)

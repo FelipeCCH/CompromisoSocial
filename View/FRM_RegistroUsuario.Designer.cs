@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_RegistroUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.hashicon = new System.Windows.Forms.PictureBox();
             this.cboRol = new System.Windows.Forms.ComboBox();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.lbClave = new System.Windows.Forms.Label();
@@ -37,15 +39,14 @@
             this.lbCorreo = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.TextBox();
             this.btnVolverRUsuario = new System.Windows.Forms.Button();
             this.btnAceptarRUsuario = new System.Windows.Forms.Button();
             this.btnVerRUsuarios = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hashicon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,7 +55,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.hashicon);
             this.panel1.Controls.Add(this.cboRol);
             this.panel1.Controls.Add(this.lbTitulo);
             this.panel1.Controls.Add(this.lbClave);
@@ -63,7 +64,7 @@
             this.panel1.Controls.Add(this.lbCorreo);
             this.panel1.Controls.Add(this.lbNombre);
             this.panel1.Controls.Add(this.txtCorreo);
-            this.panel1.Controls.Add(this.txtClave);
+            this.panel1.Controls.Add(this.txtContrasena);
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.Nombre);
             this.panel1.ForeColor = System.Drawing.Color.Cornsilk;
@@ -71,6 +72,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 429);
             this.panel1.TabIndex = 0;
+            // 
+            // hashicon
+            // 
+            this.hashicon.Image = ((System.Drawing.Image)(resources.GetObject("hashicon.Image")));
+            this.hashicon.Location = new System.Drawing.Point(263, 290);
+            this.hashicon.Name = "hashicon";
+            this.hashicon.Size = new System.Drawing.Size(25, 26);
+            this.hashicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hashicon.TabIndex = 12;
+            this.hashicon.TabStop = false;
+            this.hashicon.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cboRol
             // 
@@ -161,6 +173,7 @@
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(56, 171);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
@@ -168,19 +181,21 @@
             this.txtCorreo.TabIndex = 3;
             this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
-            // txtClave
+            // txtContrasena
             // 
-            this.txtClave.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtClave.Location = new System.Drawing.Point(56, 290);
-            this.txtClave.Multiline = true;
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(203, 26);
-            this.txtClave.TabIndex = 2;
-            this.txtClave.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtContrasena.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Location = new System.Drawing.Point(56, 290);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(203, 29);
+            this.txtContrasena.TabIndex = 2;
+            this.txtContrasena.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(56, 233);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
@@ -191,6 +206,7 @@
             // Nombre
             // 
             this.Nombre.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Nombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(56, 107);
             this.Nombre.Multiline = true;
             this.Nombre.Name = "Nombre";
@@ -240,14 +256,6 @@
             this.btnVerRUsuarios.UseVisualStyleBackColor = false;
             this.btnVerRUsuarios.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(234, 290);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 26);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // FRM_RegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,7 +272,7 @@
             this.Load += new System.EventHandler(this.FRM_RegistroUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hashicon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,7 +281,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label lbClave;
@@ -286,6 +294,6 @@
         private System.Windows.Forms.Button btnVolverRUsuario;
         private System.Windows.Forms.Button btnAceptarRUsuario;
         private System.Windows.Forms.Button btnVerRUsuarios;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox hashicon;
     }
 }

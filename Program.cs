@@ -17,7 +17,7 @@ namespace CompromisoSocial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRM_PanelAdmin());
+            Application.Run(new FRM_Login());
         }
     }
 }
