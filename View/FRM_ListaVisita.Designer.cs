@@ -18,6 +18,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.datagridListaVisita = new System.Windows.Forms.DataGridView();
+            this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             ((System.ComponentModel.ISupportInitialize)(this.datagridListaVisita)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             // 
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(28, 20);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(800, 40);
@@ -61,8 +62,13 @@
             this.datagridListaVisita.TabIndex = 4;
             this.datagridListaVisita.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaVisita_CellClick);
             // 
+            // sqLiteCommand1
+            // 
+            this.sqLiteCommand1.CommandText = null;
+            // 
             // FRM_ListaVisita
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(856, 482);
             this.Controls.Add(this.datagridListaVisita);
             this.Controls.Add(this.lblTitulo);
@@ -82,5 +88,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView datagridListaVisita;
+        private System.Data.SQLite.SQLiteCommand sqLiteCommand1;
     }
 }

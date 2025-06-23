@@ -40,13 +40,14 @@
             // 
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(0, 20);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(800, 40);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Lista de Usuarios";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // datagridListaUsuario
             // 
@@ -59,15 +60,17 @@
             this.datagridListaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridListaUsuario.Size = new System.Drawing.Size(680, 260);
             this.datagridListaUsuario.TabIndex = 4;
-            this.datagridListaUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellClick);            // 
-            // ListaUsuario
+            this.datagridListaUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellClick);
             // 
+            // FRM_ListaUsuario
+            // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.datagridListaUsuario);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCerrar);
             this.MaximizeBox = false;
-            this.Name = "ListaUsuario";
+            this.Name = "FRM_ListaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Usuarios";
             this.Load += new System.EventHandler(this.ListaUsuario_Load);
