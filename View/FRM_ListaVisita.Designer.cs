@@ -18,7 +18,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.datagridListaVisita = new System.Windows.Forms.DataGridView();
-            this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
+            //this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.datebuscar = new System.Windows.Forms.DateTimePicker();

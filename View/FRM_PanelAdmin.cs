@@ -79,7 +79,7 @@ namespace CompromisoSocial.View
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int step = 50;
+            int step = 70;
 
             if (expandiendo)
             {
@@ -129,8 +129,14 @@ namespace CompromisoSocial.View
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+        FRM_Login login = new FRM_Login();
+          login.Show();
             SesionActual.Cerrar();
-            Application.Exit();
+            
+            
+
+            this.Close(); // Cierra el panel de administrador
+
         }
 
         private void btnListaVisitas_Click(object sender, EventArgs e)

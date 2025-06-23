@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -74,7 +75,8 @@ namespace CompromisoSocial.View
             usuarioActual.nombre = txtNombre.Text.Trim();
             usuarioActual.correo = txtCorreo.Text.Trim();
             usuarioActual.telefono = telefono;
-            usuarioActual.clave = txtClave.Text.Trim();
+            usuarioActual.clave = HashClave(txtClave.Text.Trim());
+
             usuarioActual.rol = cbRol.SelectedItem.ToString();
 
             bool actualizado = controller.ActualizarUsuario(usuarioActual);
@@ -112,5 +114,24 @@ namespace CompromisoSocial.View
 
             frmEliminar.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private string HashClave(string clave)
+        {
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(clave);
+                byte[] hash = sha.ComputeHash(bytes);
+                return BitConverter.ToString(hash).Replace("-", "").ToLower();
+            }
+        }
+
+
+
     }
 }

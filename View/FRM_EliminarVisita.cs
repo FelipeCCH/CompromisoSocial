@@ -46,5 +46,10 @@ namespace CompromisoSocial.View
         {
             this.Close();
         }
+
+        private void FRM_EliminarVisita_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

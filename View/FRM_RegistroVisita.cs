@@ -106,7 +106,11 @@ namespace CompromisoSocial.View
 
         private void btnVolverRUsuario_Click(object sender, EventArgs e)
         {
+            FRM_Login login = new FRM_Login();
+            login.Show();
+
             this.Close();
+
         }
 
     }

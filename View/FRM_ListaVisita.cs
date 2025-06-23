@@ -60,6 +60,7 @@ namespace CompromisoSocial.View
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
 

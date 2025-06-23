@@ -46,7 +46,7 @@
             this.correoElectronico.AutoSize = true;
             this.correoElectronico.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correoElectronico.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.correoElectronico.Location = new System.Drawing.Point(38, 115);
+            this.correoElectronico.Location = new System.Drawing.Point(64, 117);
             this.correoElectronico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.correoElectronico.Name = "correoElectronico";
             this.correoElectronico.Size = new System.Drawing.Size(136, 15);
@@ -74,7 +74,7 @@
             // hashicon
             // 
             this.hashicon.Image = ((System.Drawing.Image)(resources.GetObject("hashicon.Image")));
-            this.hashicon.Location = new System.Drawing.Point(232, 222);
+            this.hashicon.Location = new System.Drawing.Point(258, 223);
             this.hashicon.Name = "hashicon";
             this.hashicon.Size = new System.Drawing.Size(32, 30);
             this.hashicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIngresar.Location = new System.Drawing.Point(40, 280);
+            this.btnIngresar.Location = new System.Drawing.Point(66, 282);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(186, 27);
             this.btnIngresar.TabIndex = 14;
@@ -101,7 +101,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(48, 43);
+            this.label1.Location = new System.Drawing.Point(74, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 26);
@@ -113,7 +113,7 @@
             this.txtContrasena.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(40, 222);
+            this.txtContrasena.Location = new System.Drawing.Point(66, 224);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(187, 29);
@@ -124,7 +124,7 @@
             // 
             this.txtCorreo.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(40, 139);
+            this.txtCorreo.Location = new System.Drawing.Point(66, 141);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
@@ -136,7 +136,7 @@
             this.contraseña.AutoSize = true;
             this.contraseña.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contraseña.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.contraseña.Location = new System.Drawing.Point(38, 206);
+            this.contraseña.Location = new System.Drawing.Point(64, 208);
             this.contraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contraseña.Name = "contraseña";
             this.contraseña.Size = new System.Drawing.Size(82, 15);
