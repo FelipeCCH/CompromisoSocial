@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -69,13 +70,6 @@ namespace CompromisoSocial.View
             }
 
 
-            //clave = HashClave(txtClave.Text.Trim()),
-
-
-
-
-
-
         }
 
         private void FRM_Login_Load(object sender, EventArgs e)
@@ -100,16 +94,17 @@ namespace CompromisoSocial.View
             }
 
         }
-
         private string HashClave(string clave)
         {
-            using (var sha = System.Security.Cryptography.SHA256.Create())
+            using (SHA256 sha = SHA256.Create())
             {
-                var bytes = Encoding.UTF8.GetBytes(clave);
-                var hash = sha.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
+                byte[] bytes = Encoding.UTF8.GetBytes(clave);
+                byte[] hash = sha.ComputeHash(bytes);
+                return BitConverter.ToString(hash).Replace("-", "").ToLower(); // igual que el del controller
             }
         }
+
+
 
         bool mostrar = false;
 

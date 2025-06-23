@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -59,6 +61,25 @@ namespace CompromisoSocial.View
         {
 
 
+
+            panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
+
+            txtContrasena.UseSystemPasswordChar = true;
+            string ruta = Path.Combine(Application.StartupPath, "img", "closeicon.png");
+            if (File.Exists(ruta))
+            {
+                hashicon.Image = Image.FromFile(ruta);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró closeicon.png en la carpeta img");
+            }
+
+
+
+
+
         }
 
         private void Nombre_TextChanged(object sender, EventArgs e)
@@ -82,7 +103,7 @@ namespace CompromisoSocial.View
             Nombre.Clear();
             txtCorreo.Clear();
             txtTelefono.Clear();
-            txtClave.Clear();
+            txtContrasena.Clear();
             cboRol.SelectedIndex = 0;
         }
 
@@ -93,7 +114,7 @@ namespace CompromisoSocial.View
             if (string.IsNullOrWhiteSpace(Nombre.Text) ||
             string.IsNullOrWhiteSpace(txtCorreo.Text) ||
             string.IsNullOrWhiteSpace(txtTelefono.Text) ||
-            string.IsNullOrWhiteSpace(txtClave.Text))
+            string.IsNullOrWhiteSpace(txtContrasena.Text))
             {
                 MessageBox.Show("⚠️ Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -117,12 +138,16 @@ namespace CompromisoSocial.View
 
 
 
+
+
             Usuario nuevoUsuario = new Usuario
             {
                 nombre = Nombre.Text.Trim(),
                 correo = txtCorreo.Text.Trim(),
                 telefono = int.Parse(txtTelefono.Text.Trim()),
-                clave = txtClave.Text.Trim(),
+                clave = HashClave(txtContrasena.Text.Trim()),
+
+
                 rol = cboRol.SelectedItem.ToString()
             };
 
@@ -155,23 +180,44 @@ namespace CompromisoSocial.View
 
         }
 
-        //private string hashclave(string clave)
-        //{
-        //    using (var sha = system.security.cryptography.sha256.create())
-        //    {
-        //        var bytes = encoding.utf8.getbytes(clave);
-        //        var hash = sha.computehash(bytes);
-        //        return convert.tobase64string(hash);
-        //    }
-        //}
+        private string HashClave(string clave)
+        {
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(clave);
+                byte[] hash = sha.ComputeHash(bytes);
+                return BitConverter.ToString(hash).Replace("-", "").ToLower();
+            }
+        }
+
+
+
+
+
+        bool mostrar = false;
 
         private void chkMostrarClave_CheckedChanged(object sender, EventArgs e)
         {
            // txtClave.UseSystemPasswordChar = !chkMostrarClave.Checked;
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            mostrar = !mostrar;
+            txtContrasena.UseSystemPasswordChar = !mostrar;
 
+            string nombreImagen = mostrar ? "openicon.png" : "closeicon.png";
+            string ruta = Path.Combine(Application.StartupPath, "img", nombreImagen);
 
+            if (File.Exists(ruta))
+            {
+                hashicon.Image = Image.FromFile(ruta);
+            }
+            else
+            {
+                MessageBox.Show("❌ No se encontró la imagen: " + ruta);
+            }
 
+        }
     }
 }

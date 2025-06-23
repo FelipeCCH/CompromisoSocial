@@ -116,6 +116,41 @@ namespace CompromisoSocial.Controlador
             return null;
         }
 
+        public Visita obtenerVisitanteCedula(string cedula)
+        {
+            using (var conexion = new SQLiteConnection(connectionString))
+            {
+                conexion.Open();
+                string query = "SELECT * FROM Visitas WHERE cedula = @cedula";
+
+                using (var comando = new SQLiteCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@cedula", cedula);
+
+                    using (var lector = comando.ExecuteReader())
+                    {
+                        if (lector.Read())
+                        {
+                            return new Visita
+                            {
+                                idVisita = Convert.ToInt32(lector["idVisita"]),
+                                idVisitante = Convert.ToInt32(lector["idVisitante"]),
+                                idUsuario = Convert.ToInt32(lector["idUsuario"]),
+                                cedula = lector["cedula"].ToString(),
+                                nombre = lector["nombre"].ToString(),
+                                destino = lector["destino"].ToString(),
+                                asunto = lector["asunto"].ToString(),
+                                fechaIngreso = Convert.ToDateTime(lector["fechaIngreso"]),
+                                fechaSalida = Convert.ToDateTime(lector["fechaSalida"])
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
         // Actualizar visita
         public bool ActualizarVisita(int id, Visita visita)
         {
@@ -157,6 +192,47 @@ namespace CompromisoSocial.Controlador
                 return false;
             }
         }
+
+        // Leer visitas por fecha
+        public List<Visita> ObtenerVisitasPorFecha(DateTime fecha)
+        {
+            List<Visita> lista = new List<Visita>();
+
+            using (var conexion = new SQLiteConnection(connectionString))
+            {
+                conexion.Open();
+                string query = @"SELECT * FROM Visitas WHERE fechaIngreso >= @fechaInicio AND fechaIngreso <  @fechaFin";
+
+                using (var comando = new SQLiteCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@fechaInicio", fecha.Date);
+                    comando.Parameters.AddWithValue("@fechaFin", fecha.Date.AddDays(1));
+
+                    using (var lector = comando.ExecuteReader())
+                    {
+                        while (lector.Read())
+                        {
+                            lista.Add(new Visita
+                            {
+                                idVisita = Convert.ToInt32(lector["idVisita"]),
+                                idVisitante = Convert.ToInt32(lector["idVisitante"]),
+                                idUsuario = Convert.ToInt32(lector["idUsuario"]),
+                                cedula = lector["cedula"].ToString(),
+                                nombre = lector["nombre"].ToString(),
+                                destino = lector["destino"].ToString(),
+                                asunto = lector["asunto"].ToString(),
+                                fechaIngreso = Convert.ToDateTime(lector["fechaIngreso"]),
+                                fechaSalida = Convert.ToDateTime(lector["fechaSalida"])
+                            });
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+
 
         // Eliminar visita
         public bool EliminarVisita(int id)
