@@ -28,7 +28,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(620, 370);
+            this.btnCerrar.Location = new System.Drawing.Point(688, 402);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(120, 36);
             this.btnCerrar.TabIndex = 1;
@@ -41,7 +41,7 @@
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.lblTitulo.Location = new System.Drawing.Point(0, 20);
+            this.lblTitulo.Location = new System.Drawing.Point(28, 20);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(800, 40);
             this.lblTitulo.TabIndex = 2;
@@ -53,17 +53,17 @@
             this.datagridListaVisita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.datagridListaVisita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridListaVisita.EnableHeadersVisualStyles = false;
-            this.datagridListaVisita.Location = new System.Drawing.Point(60, 80);
+            this.datagridListaVisita.Location = new System.Drawing.Point(63, 84);
             this.datagridListaVisita.Name = "datagridListaVisita";
             this.datagridListaVisita.RowHeadersWidth = 51;
             this.datagridListaVisita.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridListaVisita.Size = new System.Drawing.Size(680, 260);
+            this.datagridListaVisita.Size = new System.Drawing.Size(745, 300);
             this.datagridListaVisita.TabIndex = 4;
             this.datagridListaVisita.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaVisita_CellClick);
             // 
             // FRM_ListaVisita
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(856, 482);
             this.Controls.Add(this.datagridListaVisita);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCerrar);

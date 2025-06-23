@@ -31,7 +31,7 @@ namespace CompromisoSocial.View
 
 
             if (string.IsNullOrWhiteSpace(txtCorreo.Text) ||
-                string.IsNullOrWhiteSpace(txtContrasena.Text) )
+               string.IsNullOrWhiteSpace(txtContrasena.Text))
             {
                 MessageBox.Show("⚠️ Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -49,17 +49,27 @@ namespace CompromisoSocial.View
             UsuarioController controller = new UsuarioController();
             var usuario = controller.VerificarLogin(correo, clave);
 
-            if (usuario != null && usuario.rol == "Director")
+            if (usuario != null)
             {
+                // Cargar sesión con cualquier usuario válido
                 SesionActual.Cargar(usuario.idUsuario, usuario.nombre, usuario.rol);
 
-                FRM_PanelAdmin panel = new FRM_PanelAdmin();
-                panel.Show();
-                this.Hide();
+                if (usuario.rol == "Director")
+                {
+                    FRM_PanelAdmin panel = new FRM_PanelAdmin();
+                    panel.Show();
+                }
+                else
+                {
+                    FRM_RegistroVisita visita = new FRM_RegistroVisita();
+                    visita.Show();
+                }
+
+                this.Hide(); // Ocultar login después de cargar cualquier formulario
             }
             else
             {
-                MessageBox.Show("❌ Acceso denegado. Verifique sus credenciales o su rol.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("❌ Acceso denegado. Verifique sus credenciales.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
