@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using CompromisoSocial.Controlador;
@@ -21,6 +22,9 @@ namespace CompromisoSocial.View
         {
             CargarVisita();
             EstilizarDataGridView();
+            datebuscar.ValueChanged += datebuscar_ValueChanged;
+
+
         }
 
         private void CargarVisita()
@@ -78,6 +82,79 @@ namespace CompromisoSocial.View
                 frmEditar.ShowDialog();
                 
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datagridListaVisita_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            string textoBusqueda = txtBuscar.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(textoBusqueda))
+            {
+                CargarVisita();
+            }
+            else
+            {
+                var resultados = controller.BuscarVisitasPorCedula(textoBusqueda);
+                datagridListaVisita.DataSource = null;
+                datagridListaVisita.AutoGenerateColumns = true;
+                datagridListaVisita.DataSource = resultados;
+            }
+
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+
+            string textoBusqueda = txtBuscar.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(textoBusqueda))
+            {
+                CargarVisita();
+            }
+            else
+            {
+                var resultados = controller.BuscarVisitasPorCedula(textoBusqueda);
+                datagridListaVisita.DataSource = null;
+                datagridListaVisita.AutoGenerateColumns = true;
+                datagridListaVisita.DataSource = resultados;
+            }
+
+
+
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datebuscar_ValueChanged(object sender, EventArgs e)
+        {
+
+
+            DateTime fechaSeleccionada = datebuscar.Value.Date;
+            var visitasFiltradas = controller.ObtenerVisitasPorFecha(fechaSeleccionada);
+
+            datagridListaVisita.DataSource = null;
+            datagridListaVisita.AutoGenerateColumns = true;
+            datagridListaVisita.DataSource = visitasFiltradas;
+
+
+
         }
     }
 }

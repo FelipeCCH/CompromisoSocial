@@ -246,5 +246,47 @@ namespace CompromisoSocial.Controlador
                 return false;
             }
         }
+
+
+
+        public List<Visita> BuscarVisitasPorCedula(string cedula)
+        {
+            List<Visita> lista = new List<Visita>();
+
+            using (var conexion = new SQLiteConnection(connectionString))
+            {
+                conexion.Open();
+                string query = "SELECT * FROM Visitas WHERE cedula LIKE @cedula";
+
+                using (var comando = new SQLiteCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@cedula", "%" + cedula + "%");
+
+                    using (var lector = comando.ExecuteReader())
+                    {
+                        while (lector.Read())
+                        {
+                            lista.Add(new Visita
+                            {
+                                idVisita = Convert.ToInt32(lector["idVisita"]),
+                                idUsuario = Convert.ToInt32(lector["idUsuario"]),
+                                cedula = lector["cedula"].ToString(),
+                                nombre = lector["nombre"].ToString(),
+                                destino = lector["destino"].ToString(),
+                                asunto = lector["asunto"].ToString(),
+                                fechaIngreso = Convert.ToDateTime(lector["fechaIngreso"]),
+                                fechaSalida = Convert.ToDateTime(lector["fechaSalida"])
+                            });
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+
+
+
     }
 }
