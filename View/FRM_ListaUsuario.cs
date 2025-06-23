@@ -2,15 +2,19 @@
 using System.Drawing;
 using System.Windows.Forms;
 using CompromisoSocial.Controlador;
+using CompromisoSocial.Modelo;
 
 namespace CompromisoSocial.View
 {
-    public partial class ListaUsuario : Form
+    public partial class FRM_ListaUsuario : Form
     {
-        public ListaUsuario()
+        private UsuarioController controller;
+
+        public FRM_ListaUsuario()
         {
             InitializeComponent();
             this.Load += ListaUsuario_Load;
+            controller = new UsuarioController();
         }
 
         private void ListaUsuario_Load(object sender, EventArgs e)
@@ -21,7 +25,6 @@ namespace CompromisoSocial.View
 
         private void CargarUsuarios()
         {
-            var controller = new UsuarioController();
             var lista = controller.ObtenerUsuarios();
 
             datagridListaUsuario.DataSource = null;
@@ -64,19 +67,22 @@ namespace CompromisoSocial.View
 
         private void datagridListaUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Asegurarse de que no se hizo clic en el encabezado de la columna
+            if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = datagridListaUsuario.SelectedRows[0];
-                // Aquí puedes acceder a los datos de la fila seleccionada
-                string valorColumna1 = row.Cells["nombre"].Value.ToString();
-                // ...
-                MessageBox.Show(valorColumna1);
+                DataGridViewRow row = datagridListaUsuario.Rows[e.RowIndex];
+                int valorColumna1 = Convert.ToInt32(row.Cells["IdUsuario"].Value);
+                Usuario user = controller.ObtenerUsuarioPorId(valorColumna1);
+
+                FRM_EditarUsuario frmEditar = new FRM_EditarUsuario(user);
+
+                // Suscribirse al evento de actualización
+                frmEditar.UsuarioActualizado += (s, ev) =>
+                {
+                    CargarUsuarios(); // Refresca la lista al volver
+                };
+
+                frmEditar.ShowDialog();
             }
-        }
-
-        private void datagridListaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

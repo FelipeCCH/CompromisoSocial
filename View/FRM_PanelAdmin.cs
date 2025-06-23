@@ -123,13 +123,13 @@ namespace CompromisoSocial.View
 
         private void btnListaUsuarios_Click(object sender, EventArgs e)
         {
-            var form = new ListaUsuario();
+            var form = new FRM_ListaUsuario();
             form.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         private void btnListaVisitantes_Click(object sender, EventArgs e)

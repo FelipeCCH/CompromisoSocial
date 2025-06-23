@@ -1,6 +1,6 @@
 ﻿namespace CompromisoSocial.View
 {
-    partial class ListaUsuario
+    partial class FRM_ListaUsuario
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -59,9 +59,7 @@
             this.datagridListaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridListaUsuario.Size = new System.Drawing.Size(680, 260);
             this.datagridListaUsuario.TabIndex = 4;
-            this.datagridListaUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellClick);
-            this.datagridListaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellContentClick);
-            // 
+            this.datagridListaUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridListaUsuario_CellClick);            // 
             // ListaUsuario
             // 
             this.ClientSize = new System.Drawing.Size(800, 450);

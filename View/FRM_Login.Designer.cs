@@ -52,7 +52,6 @@
             this.correoElectronico.Size = new System.Drawing.Size(136, 15);
             this.correoElectronico.TabIndex = 0;
             this.correoElectronico.Text = "Correo eléctronico";
-            this.correoElectronico.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -71,7 +70,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(312, 409);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // hashicon
             // 
@@ -144,16 +142,16 @@
             this.contraseña.Size = new System.Drawing.Size(82, 15);
             this.contraseña.TabIndex = 1;
             this.contraseña.Text = "Contraseña";
-            this.contraseña.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // FRM_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(492, 536);
+            this.ClientSize = new System.Drawing.Size(388, 473);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "FRM_Login";
             this.Text = "FRM_Login";
             this.Load += new System.EventHandler(this.FRM_Login_Load);

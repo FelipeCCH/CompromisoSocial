@@ -51,7 +51,7 @@ namespace CompromisoSocial.View
            
 
 
-            ListaUsuario listaUsuario = new ListaUsuario();
+            FRM_ListaUsuario listaUsuario = new FRM_ListaUsuario();
             listaUsuario.ShowDialog(); // ✅ Esto sí fuerza que cargue correctamente
 
 
