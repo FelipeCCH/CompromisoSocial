@@ -8589,6 +8589,27 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="btnRegistroVisita.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnRegistroVisita.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnRegistroVisita.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt, style=Bold</value>
+  </data>
+  <data name="btnRegistroVisita.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 46</value>
+  </data>
+  <data name="btnRegistroVisita.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="btnRegistroVisita.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnRegistroVisita.Text" xml:space="preserve">
+    <value>Visita</value>
+  </data>
   <data name="&gt;&gt;btnRegistroVisita.Name" xml:space="preserve">
     <value>btnRegistroVisita</value>
   </data>
@@ -8601,6 +8622,27 @@
   <data name="&gt;&gt;btnRegistroVisita.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnRegistroVisitante.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnRegistroVisitante.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnRegistroVisitante.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt, style=Bold</value>
+  </data>
+  <data name="btnRegistroVisitante.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="btnRegistroVisitante.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="btnRegistroVisitante.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnRegistroVisitante.Text" xml:space="preserve">
+    <value>Visitante</value>
+  </data>
   <data name="&gt;&gt;btnRegistroVisitante.Name" xml:space="preserve">
     <value>btnRegistroVisitante</value>
   </data>
@@ -8612,6 +8654,30 @@
   </data>
   <data name="&gt;&gt;btnRegistroVisitante.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="btnRegistroUsuarios.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnRegistroUsuarios.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnRegistroUsuarios.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt, style=Bold</value>
+  </data>
+  <data name="btnRegistroUsuarios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRegistroUsuarios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnRegistroUsuarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="btnRegistroUsuarios.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRegistroUsuarios.Text" xml:space="preserve">
+    <value>Usuario</value>
   </data>
   <data name="&gt;&gt;btnRegistroUsuarios.Name" xml:space="preserve">
     <value>btnRegistroUsuarios</value>
@@ -8771,108 +8837,6 @@
   </data>
   <data name="&gt;&gt;sidebar.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="btnRegistroVisita.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnRegistroVisita.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="btnRegistroVisita.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8pt, style=Bold</value>
-  </data>
-  <data name="btnRegistroVisita.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 46</value>
-  </data>
-  <data name="btnRegistroVisita.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 23</value>
-  </data>
-  <data name="btnRegistroVisita.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnRegistroVisita.Text" xml:space="preserve">
-    <value>Visita</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisita.Name" xml:space="preserve">
-    <value>btnRegistroVisita</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisita.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisita.Parent" xml:space="preserve">
-    <value>pnlRegistroSubmenu</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisita.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnRegistroVisitante.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnRegistroVisitante.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="btnRegistroVisitante.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8pt, style=Bold</value>
-  </data>
-  <data name="btnRegistroVisitante.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 23</value>
-  </data>
-  <data name="btnRegistroVisitante.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 23</value>
-  </data>
-  <data name="btnRegistroVisitante.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnRegistroVisitante.Text" xml:space="preserve">
-    <value>Visitante</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisitante.Name" xml:space="preserve">
-    <value>btnRegistroVisitante</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisitante.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisitante.Parent" xml:space="preserve">
-    <value>pnlRegistroSubmenu</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroVisitante.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnRegistroUsuarios.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnRegistroUsuarios.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="btnRegistroUsuarios.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8pt, style=Bold</value>
-  </data>
-  <data name="btnRegistroUsuarios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnRegistroUsuarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="btnRegistroUsuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 23</value>
-  </data>
-  <data name="btnRegistroUsuarios.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnRegistroUsuarios.Text" xml:space="preserve">
-    <value>Usuario</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroUsuarios.Name" xml:space="preserve">
-    <value>btnRegistroUsuarios</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroUsuarios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroUsuarios.Parent" xml:space="preserve">
-    <value>pnlRegistroSubmenu</value>
-  </data>
-  <data name="&gt;&gt;btnRegistroUsuarios.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="menu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

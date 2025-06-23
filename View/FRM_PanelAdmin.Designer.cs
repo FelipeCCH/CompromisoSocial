@@ -104,6 +104,7 @@ namespace CompromisoSocial.View
             this.btnListaVisitantes.ForeColor = System.Drawing.Color.White;
             this.btnListaVisitantes.Name = "btnListaVisitantes";
             this.btnListaVisitantes.UseVisualStyleBackColor = true;
+            this.btnListaVisitantes.Click += new System.EventHandler(this.btnListaVisitantes_Click);
             // 
             // btnListaUsuarios
             // 

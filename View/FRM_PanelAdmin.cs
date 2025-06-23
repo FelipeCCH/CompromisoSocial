@@ -131,5 +131,11 @@ namespace CompromisoSocial.View
         {
             
         }
+
+        private void btnListaVisitantes_Click(object sender, EventArgs e)
+        {
+            var form = new ListaVisitante();
+            form.ShowDialog();
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace CompromisoSocial.Controlador
                 using (var conexion = new SQLiteConnection(connectionString))
                 {
                     conexion.Open();
-                    string query = "INSERT INTO Visitantes (cedula, nombre, correo, telefono, direccion) " +
+                    string query = "INSERT INTO Visitante (cedula, nombre, correo, telefono, direccion) " +
                                    "VALUES (@cedula, @nombre, @correo, @telefono, @direccion)";
 
                     using (var comando = new SQLiteCommand(query, conexion))
@@ -51,7 +51,7 @@ namespace CompromisoSocial.Controlador
             using (var conexion = new SQLiteConnection(connectionString))
             {
                 conexion.Open();
-                string query = "SELECT * FROM Visitantes";
+                string query = "SELECT * FROM Visitante";
 
                 using (var comando = new SQLiteCommand(query, conexion))
                 using (var lector = comando.ExecuteReader())
@@ -80,7 +80,7 @@ namespace CompromisoSocial.Controlador
             using (var conexion = new SQLiteConnection(connectionString))
             {
                 conexion.Open();
-                string query = "SELECT * FROM Visitantes WHERE idVisitante = @id";
+                string query = "SELECT * FROM Visitante WHERE idVisitante = @id";
 
                 using (var comando = new SQLiteCommand(query, conexion))
                 {
@@ -115,7 +115,7 @@ namespace CompromisoSocial.Controlador
                 using (var conexion = new SQLiteConnection(connectionString))
                 {
                     conexion.Open();
-                    string query = "UPDATE Visitantes SET cedula = @cedula, nombre = @nombre, correo = @correo, " +
+                    string query = "UPDATE Visitante SET cedula = @cedula, nombre = @nombre, correo = @correo, " +
                                    "telefono = @telefono, direccion = @direccion WHERE idVisitante = @idVisitante";
 
                     using (var comando = new SQLiteCommand(query, conexion))
@@ -146,7 +146,7 @@ namespace CompromisoSocial.Controlador
                 using (var conexion = new SQLiteConnection(connectionString))
                 {
                     conexion.Open();
-                    string query = "DELETE FROM Visitantes WHERE idVisitante = @id";
+                    string query = "DELETE FROM Visitante WHERE idVisitante = @id";
 
                     using (var comando = new SQLiteCommand(query, conexion))
                     {
