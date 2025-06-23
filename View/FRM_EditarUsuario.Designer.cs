@@ -126,7 +126,7 @@
             // 
             this.cbRol.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbRol.Enabled = false;
-            this.cbRol.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.cbRol.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbRol.FormattingEnabled = true;
             this.cbRol.Items.AddRange(new object[] {
             "Seleccione un rol",

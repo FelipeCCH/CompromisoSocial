@@ -88,7 +88,7 @@
             // 
             this.cboRol.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.cboRol.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cboRol.FormattingEnabled = true;
             this.cboRol.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cboRol.Items.AddRange(new object[] {
