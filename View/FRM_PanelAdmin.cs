@@ -129,12 +129,19 @@ namespace CompromisoSocial.View
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            SesionActual.Cerrar();
+            Application.Exit();
         }
 
-        private void btnListaVisitantes_Click(object sender, EventArgs e)
+        private void btnListaVisitas_Click(object sender, EventArgs e)
         {
-            var form = new ListaVisitante();
+            var form = new FRM_ListaVisita();
+            form.ShowDialog();
+        }
+
+        private void btnRegistroVisita_Click(object sender, EventArgs e)
+        {
+            var form = new FRM_RegistroVisita();
             form.ShowDialog();
         }
     }

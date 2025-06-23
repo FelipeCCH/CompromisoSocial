@@ -25,13 +25,11 @@ namespace CompromisoSocial.View
             this.close = new System.Windows.Forms.PictureBox();
             this.pnlListasSubmenu = new System.Windows.Forms.Panel();
             this.btnListaVisitas = new System.Windows.Forms.Button();
-            this.btnListaVisitantes = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnVisitas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlRegistroSubmenu = new System.Windows.Forms.Panel();
             this.btnRegistroVisita = new System.Windows.Forms.Button();
-            this.btnRegistroVisitante = new System.Windows.Forms.Button();
             this.btnRegistroUsuarios = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -86,7 +84,6 @@ namespace CompromisoSocial.View
             // pnlListasSubmenu
             // 
             this.pnlListasSubmenu.Controls.Add(this.btnListaVisitas);
-            this.pnlListasSubmenu.Controls.Add(this.btnListaVisitantes);
             this.pnlListasSubmenu.Controls.Add(this.btnListaUsuarios);
             resources.ApplyResources(this.pnlListasSubmenu, "pnlListasSubmenu");
             this.pnlListasSubmenu.Name = "pnlListasSubmenu";
@@ -97,14 +94,7 @@ namespace CompromisoSocial.View
             this.btnListaVisitas.ForeColor = System.Drawing.Color.White;
             this.btnListaVisitas.Name = "btnListaVisitas";
             this.btnListaVisitas.UseVisualStyleBackColor = true;
-            // 
-            // btnListaVisitantes
-            // 
-            resources.ApplyResources(this.btnListaVisitantes, "btnListaVisitantes");
-            this.btnListaVisitantes.ForeColor = System.Drawing.Color.White;
-            this.btnListaVisitantes.Name = "btnListaVisitantes";
-            this.btnListaVisitantes.UseVisualStyleBackColor = true;
-            this.btnListaVisitantes.Click += new System.EventHandler(this.btnListaVisitantes_Click);
+            this.btnListaVisitas.Click += new System.EventHandler(this.btnListaVisitas_Click);
             // 
             // btnListaUsuarios
             // 
@@ -132,7 +122,6 @@ namespace CompromisoSocial.View
             // pnlRegistroSubmenu
             // 
             this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroVisita);
-            this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroVisitante);
             this.pnlRegistroSubmenu.Controls.Add(this.btnRegistroUsuarios);
             resources.ApplyResources(this.pnlRegistroSubmenu, "pnlRegistroSubmenu");
             this.pnlRegistroSubmenu.Name = "pnlRegistroSubmenu";
@@ -143,13 +132,7 @@ namespace CompromisoSocial.View
             this.btnRegistroVisita.ForeColor = System.Drawing.Color.White;
             this.btnRegistroVisita.Name = "btnRegistroVisita";
             this.btnRegistroVisita.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistroVisitante
-            // 
-            resources.ApplyResources(this.btnRegistroVisitante, "btnRegistroVisitante");
-            this.btnRegistroVisitante.ForeColor = System.Drawing.Color.White;
-            this.btnRegistroVisitante.Name = "btnRegistroVisitante";
-            this.btnRegistroVisitante.UseVisualStyleBackColor = true;
+            this.btnRegistroVisita.Click += new System.EventHandler(this.btnRegistroVisita_Click);
             // 
             // btnRegistroUsuarios
             // 
@@ -223,11 +206,9 @@ namespace CompromisoSocial.View
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlRegistroSubmenu;
         private System.Windows.Forms.Button btnRegistroVisita;
-        private System.Windows.Forms.Button btnRegistroVisitante;
         private System.Windows.Forms.Button btnRegistroUsuarios;
         private System.Windows.Forms.Panel pnlListasSubmenu;
         private System.Windows.Forms.Button btnListaVisitas;
-        private System.Windows.Forms.Button btnListaVisitantes;
         private System.Windows.Forms.Button btnListaUsuarios;
     }
 }

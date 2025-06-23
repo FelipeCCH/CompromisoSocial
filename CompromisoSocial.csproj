@@ -2,7 +2,6 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -15,7 +14,6 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -26,7 +24,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -36,7 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <!-- Referencias -->
     <Reference Include="System" />
@@ -67,23 +63,20 @@
       <HintPath>packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
   </ItemGroup>
-
   <ItemGroup>
     <!-- Archivos de código -->
+    <Compile Include="Modelo\SesionActual.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controlador\UsuarioController.cs" />
-    <Compile Include="Controlador\VisitanteController.cs" />
     <Compile Include="Controlador\VisitaController.cs" />
     <Compile Include="Modelo\Usuario.cs" />
-    <Compile Include="Modelo\Visitante.cs" />
     <Compile Include="Modelo\Visita.cs" />
-
+    <Compile Include="View\FRM_EditarVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_EditarVisita.Designer.cs">
+      <DependentUpon>FRM_EditarVisita.cs</DependentUpon>
+    </Compile>
     <!-- Formulario actualizado -->
     <Compile Include="View\FRM_EditarUsuario.cs">
       <SubType>Form</SubType>
@@ -91,11 +84,23 @@
     <Compile Include="View\FRM_EditarUsuario.Designer.cs">
       <DependentUpon>FRM_EditarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FRM_EliminarVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_EliminarVisita.Designer.cs">
+      <DependentUpon>FRM_EliminarVisita.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FRM_EliminarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FRM_EliminarUsuario.Designer.cs">
       <DependentUpon>FRM_EliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_ListaVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_ListaVisita.Designer.cs">
+      <DependentUpon>FRM_ListaVisita.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FRM_ListaUsuario.cs">
       <SubType>Form</SubType>
@@ -115,33 +120,35 @@
     <Compile Include="View\FRM_PanelAdmin.Designer.cs">
       <DependentUpon>FRM_PanelAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FRM_RegistroVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_RegistroVisita.Designer.cs">
+      <DependentUpon>FRM_RegistroVisita.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FRM_RegistroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FRM_RegistroUsuario.Designer.cs">
       <DependentUpon>FRM_RegistroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FRM_Visitante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FRM_Visitante.Designer.cs">
-      <DependentUpon>FRM_Visitante.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ListaVisitante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ListaVisitante.Designer.cs">
-      <DependentUpon>ListaVisitante.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <!-- Recursos -->
+    <EmbeddedResource Include="View\FRM_EditarVisita.resx">
+      <DependentUpon>FRM_EditarVisita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FRM_EditarUsuario.resx">
       <DependentUpon>FRM_EditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_EliminarVisita.resx">
+      <DependentUpon>FRM_EliminarVisita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FRM_EliminarUsuario.resx">
       <DependentUpon>FRM_EliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_ListaVisita.resx">
+      <DependentUpon>FRM_ListaVisita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FRM_ListaUsuario.resx">
       <DependentUpon>FRM_ListaUsuario.cs</DependentUpon>
@@ -152,14 +159,11 @@
     <EmbeddedResource Include="View\FRM_PanelAdmin.resx">
       <DependentUpon>FRM_PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_RegistroVisita.resx">
+      <DependentUpon>FRM_RegistroVisita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FRM_RegistroUsuario.resx">
       <DependentUpon>FRM_RegistroUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FRM_Visitante.resx">
-      <DependentUpon>FRM_Visitante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ListaVisitante.resx">
-      <DependentUpon>ListaVisitante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,7 +171,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <!-- Otros archivos -->
     <None Include="App.config" />
@@ -191,7 +194,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

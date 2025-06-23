@@ -1,6 +1,6 @@
 ﻿namespace CompromisoSocial.View
 {
-    partial class FRM_EditarUsuario
+    partial class FRM_EditarVisita
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtFechaSalida = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaEntrada = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbRol = new System.Windows.Forms.ComboBox();
-            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtAsunto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDestino = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdUsuario = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtIdVisita = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -75,18 +77,20 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.panel2.Controls.Add(this.dtFechaSalida);
+            this.panel2.Controls.Add(this.dtFechaEntrada);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.cbRol);
-            this.panel2.Controls.Add(this.txtClave);
+            this.panel2.Controls.Add(this.txtAsunto);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtTelefono);
+            this.panel2.Controls.Add(this.txtDestino);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtCorreo);
+            this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtIdUsuario);
-            this.panel2.Controls.Add(this.txtNombre);
+            this.panel2.Controls.Add(this.txtIdVisita);
+            this.panel2.Controls.Add(this.txtCedula);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.btnGuardar);
@@ -96,6 +100,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(273, 436);
             this.panel2.TabIndex = 1;
+            // 
+            // dtFechaSalida
+            // 
+            this.dtFechaSalida.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFechaSalida.Location = new System.Drawing.Point(40, 354);
+            this.dtFechaSalida.Name = "dtFechaSalida";
+            this.dtFechaSalida.ShowUpDown = true;
+            this.dtFechaSalida.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaSalida.TabIndex = 18;
+            // 
+            // dtFechaEntrada
+            // 
+            this.dtFechaEntrada.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFechaEntrada.Location = new System.Drawing.Point(39, 304);
+            this.dtFechaEntrada.Name = "dtFechaEntrada";
+            this.dtFechaEntrada.ShowUpDown = true;
+            this.dtFechaEntrada.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaEntrada.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label8.Location = new System.Drawing.Point(36, 283);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(102, 19);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Fecha Entrada";
             // 
             // btnEliminar
             // 
@@ -115,137 +151,120 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(36, 313);
+            this.label7.Location = new System.Drawing.Point(36, 334);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 19);
+            this.label7.Size = new System.Drawing.Size(92, 19);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Rol";
+            this.label7.Text = "Fecha Salida";
             // 
-            // cbRol
+            // txtAsunto
             // 
-            this.cbRol.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.cbRol.Enabled = false;
-            this.cbRol.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cbRol.FormattingEnabled = true;
-            this.cbRol.Items.AddRange(new object[] {
-            "Seleccione un rol",
-            "Director",
-            "Administrador Principal",
-            "Administrador Secundario"});
-            this.cbRol.Location = new System.Drawing.Point(39, 334);
-            this.cbRol.Margin = new System.Windows.Forms.Padding(2);
-            this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(194, 21);
-            this.cbRol.TabIndex = 12;
-            // 
-            // txtClave
-            // 
-            this.txtClave.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtClave.Location = new System.Drawing.Point(39, 274);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(194, 20);
-            this.txtClave.TabIndex = 11;
+            this.txtAsunto.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtAsunto.Location = new System.Drawing.Point(39, 251);
+            this.txtAsunto.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAsunto.Name = "txtAsunto";
+            this.txtAsunto.Size = new System.Drawing.Size(194, 20);
+            this.txtAsunto.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(36, 253);
+            this.label6.Location = new System.Drawing.Point(35, 230);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 19);
+            this.label6.Size = new System.Drawing.Size(55, 19);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Contraseña";
+            this.label6.Text = "Asunto";
             // 
-            // txtTelefono
+            // txtDestino
             // 
-            this.txtTelefono.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtTelefono.Location = new System.Drawing.Point(39, 212);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(194, 20);
-            this.txtTelefono.TabIndex = 9;
+            this.txtDestino.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtDestino.Location = new System.Drawing.Point(39, 199);
+            this.txtDestino.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDestino.Name = "txtDestino";
+            this.txtDestino.Size = new System.Drawing.Size(194, 20);
+            this.txtDestino.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(36, 191);
+            this.label5.Location = new System.Drawing.Point(36, 179);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 19);
+            this.label5.Size = new System.Drawing.Size(59, 19);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Teléfono";
+            this.label5.Text = "Destino";
             // 
-            // txtCorreo
+            // txtNombre
             // 
-            this.txtCorreo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtCorreo.Location = new System.Drawing.Point(39, 154);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(194, 20);
-            this.txtCorreo.TabIndex = 7;
+            this.txtNombre.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtNombre.Location = new System.Drawing.Point(39, 146);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(194, 20);
+            this.txtNombre.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(36, 132);
+            this.label4.Location = new System.Drawing.Point(36, 123);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 19);
+            this.label4.Size = new System.Drawing.Size(65, 19);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Correo";
+            this.label4.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(36, 20);
+            this.label3.Location = new System.Drawing.Point(36, 13);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 19);
+            this.label3.Size = new System.Drawing.Size(63, 19);
             this.label3.TabIndex = 5;
-            this.label3.Text = "ID";
+            this.label3.Text = "ID Visita";
             // 
-            // txtIdUsuario
+            // txtIdVisita
             // 
-            this.txtIdUsuario.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtIdUsuario.Enabled = false;
-            this.txtIdUsuario.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtIdUsuario.Location = new System.Drawing.Point(39, 41);
-            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.Size = new System.Drawing.Size(194, 20);
-            this.txtIdUsuario.TabIndex = 4;
+            this.txtIdVisita.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtIdVisita.Enabled = false;
+            this.txtIdVisita.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtIdVisita.Location = new System.Drawing.Point(39, 34);
+            this.txtIdVisita.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdVisita.Name = "txtIdVisita";
+            this.txtIdVisita.Size = new System.Drawing.Size(194, 20);
+            this.txtIdVisita.TabIndex = 4;
             // 
-            // txtNombre
+            // txtCedula
             // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtNombre.Location = new System.Drawing.Point(39, 97);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(194, 20);
-            this.txtNombre.TabIndex = 3;
+            this.txtCedula.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCedula.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtCedula.Location = new System.Drawing.Point(39, 89);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(194, 20);
+            this.txtCedula.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(36, 76);
+            this.label2.Location = new System.Drawing.Point(36, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.Size = new System.Drawing.Size(55, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Cedula";
             // 
             // btnCancelar
             // 
@@ -303,17 +322,19 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtIdUsuario;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtIdVisita;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbRol;
-        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.TextBox txtAsunto;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtFechaEntrada;
+        private System.Windows.Forms.DateTimePicker dtFechaSalida;
     }
 }

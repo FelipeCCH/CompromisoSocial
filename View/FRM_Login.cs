@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CompromisoSocial.Controlador;
+using CompromisoSocial.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +11,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CompromisoSocial.Controlador;
 
 namespace CompromisoSocial.View
 {
@@ -50,6 +51,8 @@ namespace CompromisoSocial.View
 
             if (usuario != null && usuario.rol == "Director")
             {
+                SesionActual.Cargar(usuario.idUsuario, usuario.nombre, usuario.rol);
+
                 FRM_PanelAdmin panel = new FRM_PanelAdmin();
                 panel.Show();
                 this.Hide();
@@ -64,11 +67,37 @@ namespace CompromisoSocial.View
 
         private void FRM_Login_Load(object sender, EventArgs e)
         {
+            // Crear usuario por defecto si no existen
+            UsuarioController controller = new UsuarioController();
+            var usuarios = controller.ObtenerUsuarios();
 
+            if (usuarios == null || usuarios.Count == 0)
+            {
+                string correoDefault = "admin@escuela.com";
+                string claveDefault = HashClave("admin123");
 
-         
+                var usuarioDefault = new Usuario
+                {
+                    nombre = "Administrador",
+                    correo = correoDefault,
+                    telefono = 12345678,
+                    clave = claveDefault,
+                    rol = "Director"
+                };
 
+                bool creado = controller.InsertarUsuario(usuarioDefault);
 
+                if (creado)
+                {
+                    MessageBox.Show("✔️ Se ha creado un usuario administrador por defecto:\n\nCorreo: admin@escuela.com\nContraseña: admin123", "Usuario creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("❌ No se pudo crear el usuario administrador por defecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            // Centrar panel y configurar icono
             panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
             panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
 

@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CompromisoSocial.Controlador
@@ -21,12 +18,11 @@ namespace CompromisoSocial.Controlador
                 using (var conexion = new SQLiteConnection(connectionString))
                 {
                     conexion.Open();
-                    string query = @"INSERT INTO Visitas (idVisitante, idUsuario, cedula, nombre, destino, asunto, fechaIngreso, fechaSalida)
-                                     VALUES (@idVisitante, @idUsuario, @cedula, @nombre, @destino, @asunto, @fechaIngreso, @fechaSalida)";
+                    string query = @"INSERT INTO Visitas (idUsuario, cedula, nombre, destino, asunto, fechaIngreso, fechaSalida)
+                                     VALUES (@idUsuario, @cedula, @nombre, @destino, @asunto, @fechaIngreso, @fechaSalida)";
 
                     using (var comando = new SQLiteCommand(query, conexion))
                     {
-                        comando.Parameters.AddWithValue("@idVisitante", visita.idVisitante);
                         comando.Parameters.AddWithValue("@idUsuario", visita.idUsuario);
                         comando.Parameters.AddWithValue("@cedula", visita.cedula);
                         comando.Parameters.AddWithValue("@nombre", visita.nombre);
@@ -64,7 +60,6 @@ namespace CompromisoSocial.Controlador
                         lista.Add(new Visita
                         {
                             idVisita = Convert.ToInt32(lector["idVisita"]),
-                            idVisitante = Convert.ToInt32(lector["idVisitante"]),
                             idUsuario = Convert.ToInt32(lector["idUsuario"]),
                             cedula = lector["cedula"].ToString(),
                             nombre = lector["nombre"].ToString(),
@@ -99,7 +94,6 @@ namespace CompromisoSocial.Controlador
                             return new Visita
                             {
                                 idVisita = Convert.ToInt32(lector["idVisita"]),
-                                idVisitante = Convert.ToInt32(lector["idVisitante"]),
                                 idUsuario = Convert.ToInt32(lector["idUsuario"]),
                                 cedula = lector["cedula"].ToString(),
                                 nombre = lector["nombre"].ToString(),
@@ -116,7 +110,8 @@ namespace CompromisoSocial.Controlador
             return null;
         }
 
-        public Visita obtenerVisitanteCedula(string cedula)
+        // Buscar visita por cédula
+        public Visita ObtenerVisitaPorCedula(string cedula)
         {
             using (var conexion = new SQLiteConnection(connectionString))
             {
@@ -134,7 +129,6 @@ namespace CompromisoSocial.Controlador
                             return new Visita
                             {
                                 idVisita = Convert.ToInt32(lector["idVisita"]),
-                                idVisitante = Convert.ToInt32(lector["idVisitante"]),
                                 idUsuario = Convert.ToInt32(lector["idUsuario"]),
                                 cedula = lector["cedula"].ToString(),
                                 nombre = lector["nombre"].ToString(),
@@ -160,7 +154,6 @@ namespace CompromisoSocial.Controlador
                 {
                     conexion.Open();
                     string query = @"UPDATE Visitas SET 
-                                     idVisitante = @idVisitante, 
                                      idUsuario = @idUsuario, 
                                      cedula = @cedula, 
                                      nombre = @nombre, 
@@ -172,7 +165,6 @@ namespace CompromisoSocial.Controlador
 
                     using (var comando = new SQLiteCommand(query, conexion))
                     {
-                        comando.Parameters.AddWithValue("@idVisitante", visita.idVisitante);
                         comando.Parameters.AddWithValue("@idUsuario", visita.idUsuario);
                         comando.Parameters.AddWithValue("@cedula", visita.cedula);
                         comando.Parameters.AddWithValue("@nombre", visita.nombre);
@@ -201,7 +193,7 @@ namespace CompromisoSocial.Controlador
             using (var conexion = new SQLiteConnection(connectionString))
             {
                 conexion.Open();
-                string query = @"SELECT * FROM Visitas WHERE fechaIngreso >= @fechaInicio AND fechaIngreso <  @fechaFin";
+                string query = @"SELECT * FROM Visitas WHERE fechaIngreso >= @fechaInicio AND fechaIngreso < @fechaFin";
 
                 using (var comando = new SQLiteCommand(query, conexion))
                 {
@@ -215,7 +207,6 @@ namespace CompromisoSocial.Controlador
                             lista.Add(new Visita
                             {
                                 idVisita = Convert.ToInt32(lector["idVisita"]),
-                                idVisitante = Convert.ToInt32(lector["idVisitante"]),
                                 idUsuario = Convert.ToInt32(lector["idUsuario"]),
                                 cedula = lector["cedula"].ToString(),
                                 nombre = lector["nombre"].ToString(),
@@ -231,8 +222,6 @@ namespace CompromisoSocial.Controlador
 
             return lista;
         }
-
-
 
         // Eliminar visita
         public bool EliminarVisita(int id)
@@ -259,4 +248,3 @@ namespace CompromisoSocial.Controlador
         }
     }
 }
-

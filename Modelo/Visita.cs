@@ -9,7 +9,6 @@ namespace CompromisoSocial.Modelo
     public class Visita
     {
         public int idVisita { get; set; }
-        public int idVisitante { get; set; }
         public int idUsuario { get; set; }
         public string cedula { get; set; }
         public string nombre { get; set; }

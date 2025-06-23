@@ -42,9 +42,9 @@
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.TextBox();
-            this.btnVolverRUsuario = new System.Windows.Forms.Button();
-            this.btnAceptarRUsuario = new System.Windows.Forms.Button();
-            this.btnVerRUsuarios = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnAceptarUsuario = new System.Windows.Forms.Button();
+            this.btnVerUsuarios = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hashicon)).BeginInit();
             this.SuspendLayout();
@@ -214,47 +214,47 @@
             this.Nombre.TabIndex = 0;
             this.Nombre.TextChanged += new System.EventHandler(this.Nombre_TextChanged);
             // 
-            // btnVolverRUsuario
+            // btnVolver
             // 
-            this.btnVolverRUsuario.BackColor = System.Drawing.Color.Gray;
-            this.btnVolverRUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVolverRUsuario.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverRUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVolverRUsuario.Location = new System.Drawing.Point(39, 487);
-            this.btnVolverRUsuario.Name = "btnVolverRUsuario";
-            this.btnVolverRUsuario.Size = new System.Drawing.Size(68, 27);
-            this.btnVolverRUsuario.TabIndex = 12;
-            this.btnVolverRUsuario.Text = "Volver";
-            this.btnVolverRUsuario.UseVisualStyleBackColor = false;
-            this.btnVolverRUsuario.Click += new System.EventHandler(this.btnVolverRUsuario_Click);
+            this.btnVolver.BackColor = System.Drawing.Color.Gray;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVolver.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVolver.Location = new System.Drawing.Point(289, 487);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(68, 27);
+            this.btnVolver.TabIndex = 12;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolverRUsuario_Click);
             // 
-            // btnAceptarRUsuario
+            // btnAceptarUsuario
             // 
-            this.btnAceptarRUsuario.BackColor = System.Drawing.Color.Green;
-            this.btnAceptarRUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptarRUsuario.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarRUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAceptarRUsuario.Location = new System.Drawing.Point(112, 487);
-            this.btnAceptarRUsuario.Name = "btnAceptarRUsuario";
-            this.btnAceptarRUsuario.Size = new System.Drawing.Size(88, 27);
-            this.btnAceptarRUsuario.TabIndex = 13;
-            this.btnAceptarRUsuario.Text = "Aceptar";
-            this.btnAceptarRUsuario.UseVisualStyleBackColor = false;
-            this.btnAceptarRUsuario.Click += new System.EventHandler(this.btnAceptar);
+            this.btnAceptarUsuario.BackColor = System.Drawing.Color.Green;
+            this.btnAceptarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAceptarUsuario.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAceptarUsuario.Location = new System.Drawing.Point(39, 487);
+            this.btnAceptarUsuario.Name = "btnAceptarUsuario";
+            this.btnAceptarUsuario.Size = new System.Drawing.Size(88, 27);
+            this.btnAceptarUsuario.TabIndex = 13;
+            this.btnAceptarUsuario.Text = "Aceptar";
+            this.btnAceptarUsuario.UseVisualStyleBackColor = false;
+            this.btnAceptarUsuario.Click += new System.EventHandler(this.btnAceptar);
             // 
-            // btnVerRUsuarios
+            // btnVerUsuarios
             // 
-            this.btnVerRUsuarios.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnVerRUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVerRUsuarios.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerRUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVerRUsuarios.Location = new System.Drawing.Point(235, 487);
-            this.btnVerRUsuarios.Name = "btnVerRUsuarios";
-            this.btnVerRUsuarios.Size = new System.Drawing.Size(122, 27);
-            this.btnVerRUsuarios.TabIndex = 14;
-            this.btnVerRUsuarios.Text = "Ver registros";
-            this.btnVerRUsuarios.UseVisualStyleBackColor = false;
-            this.btnVerRUsuarios.Click += new System.EventHandler(this.button3_Click);
+            this.btnVerUsuarios.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnVerUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerUsuarios.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVerUsuarios.Location = new System.Drawing.Point(145, 487);
+            this.btnVerUsuarios.Name = "btnVerUsuarios";
+            this.btnVerUsuarios.Size = new System.Drawing.Size(122, 27);
+            this.btnVerUsuarios.TabIndex = 14;
+            this.btnVerUsuarios.Text = "Ver registros";
+            this.btnVerUsuarios.UseVisualStyleBackColor = false;
+            this.btnVerUsuarios.Click += new System.EventHandler(this.button3_Click);
             // 
             // FRM_RegistroUsuario
             // 
@@ -262,9 +262,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(403, 548);
-            this.Controls.Add(this.btnVerRUsuarios);
-            this.Controls.Add(this.btnAceptarRUsuario);
-            this.Controls.Add(this.btnVolverRUsuario);
+            this.Controls.Add(this.btnVerUsuarios);
+            this.Controls.Add(this.btnAceptarUsuario);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "FRM_RegistroUsuario";
@@ -291,9 +291,9 @@
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.ComboBox cboRol;
-        private System.Windows.Forms.Button btnVolverRUsuario;
-        private System.Windows.Forms.Button btnAceptarRUsuario;
-        private System.Windows.Forms.Button btnVerRUsuarios;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnAceptarUsuario;
+        private System.Windows.Forms.Button btnVerUsuarios;
         private System.Windows.Forms.PictureBox hashicon;
     }
 }
