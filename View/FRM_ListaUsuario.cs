@@ -84,5 +84,10 @@ namespace CompromisoSocial.View
                 frmEditar.ShowDialog();
             }
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,6 +18,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.datagridListaVisita = new System.Windows.Forms.DataGridView();
+            this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.datebuscar = new System.Windows.Forms.DateTimePicker();
@@ -43,7 +44,7 @@
             // 
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(28, 20);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(800, 40);
@@ -98,6 +99,7 @@
             // 
             // FRM_ListaVisita
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(856, 482);
             this.Controls.Add(this.datebuscar);
             this.Controls.Add(this.btnBuscar);

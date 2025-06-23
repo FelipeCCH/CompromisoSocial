@@ -35,6 +35,7 @@ namespace CompromisoSocial.View
             this.btnHome = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
@@ -42,6 +43,7 @@ namespace CompromisoSocial.View
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlRegistroSubmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -172,11 +174,19 @@ namespace CompromisoSocial.View
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::CompromisoSocial.Properties.Resources.background;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
             // FRM_PanelAdmin
             // 
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.menu);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.sidebar);
             this.MaximizeBox = false;
             this.Name = "FRM_PanelAdmin";
@@ -188,6 +198,7 @@ namespace CompromisoSocial.View
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlRegistroSubmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +221,6 @@ namespace CompromisoSocial.View
         private System.Windows.Forms.Panel pnlListasSubmenu;
         private System.Windows.Forms.Button btnListaVisitas;
         private System.Windows.Forms.Button btnListaUsuarios;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
